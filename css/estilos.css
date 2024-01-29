@@ -1,0 +1,25 @@
+.cont {
+    text-align: center;
+    margin: auto;
+    width: 350px;
+    height: 480px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+/* #bur {
+    animation-name: girar;
+    animation-delay: 2s;
+    animation-duration: 5000ms;
+    animation-iteration-count: 2;
+    animation-timing-function: linear; 
+	animation-play-state: paused;
+} */
+/* @keyframes girar {
+    from {transform: rotate(0deg) scaleX(0) scaleY(0);}
+    to {transform: rotate(360deg) scaleX(0.5) scaleY(0.5);}
+  } */
+img {
+    transition: all 1s 2s linear; transform: rotate(25deg);
+}
+img:hover { transform: rotate(360deg) scaleX(1.5) scaleY(1.5);}

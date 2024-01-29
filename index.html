@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/cow128.png">
+    <title>Mooo App</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ("serviceWorker" in navigator){
+	    navigator.serviceWorker
+	    .register("sw.js")
+	    .then(function (registracion) {
+	    console.log("Service Worker registrado correctamente", registracion.scope);
+	});
+}
+              
+        /* navigator.serviceWorker
+            && navigator.serviceWorker.register("./sw.js")
+                .then((reg) => { console.log("SW Registered") }) */
+    </script>
+</head>
+<body>
+    <div class="cont z-depth-4" ><!-- style="margin-top: 20px;" -->
+    <h1>Mooo App</h1><br>
+    <div id="b_play"><img src="img/cow256.png" alt="moo" id="bur"></div>
+    <br><br>
+    <!-- <a class="waves-effect waves-light btn-large" id="b_play">presiona aquí</a> -->
+    </div>
+    <audio id="musica" src="audio/Cow-Mooing.mp3"></audio>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--  -->
+<script>
+    var musica = document.getElementById('musica')
+    document.getElementById('b_play').onclick=reproduccion;
+    function reproduccion(){
+    musica.play();
+    }
+    //-- no compatibiliza con el audio --//
+   /*  document.getElementById('b_play').onclick = girar;
+    function girar(){
+            document.getElementById('bur').style.animationPlayState ='running';
+        } */
+</script>
+</body>
+</html>
